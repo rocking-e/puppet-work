@@ -7,7 +7,7 @@ Invoke-WebRequest -Uri $asset.browser_download_url -OutFile $installer
 # run installer
 #$git_install_inf = Join-Path -path $PWD.Path -ChildPath ".\git-install.ini"
 #$install_args = "/SP- /VERYSILENT /SUPPRESSMSGBOXES /NOCANCEL /NORESTART /CLOSEAPPLICATIONS /RESTARTAPPLICATIONS /LOADINF=""$git_install_inf"""
-$install_args = /VERYSILENT /NORESTART /NOCANCEL /SP- /CLOSEAPPLICATIONS /RESTARTAPPLICATIONS /COMPONENTS="icons,ext\reg\shellhere,assoc,assoc_sh"
+$install_args = '/VERYSILENT /NORESTART /NOCANCEL /SP- /CLOSEAPPLICATIONS /RESTARTAPPLICATIONS /COMPONENTS="icons,ext\reg\shellhere,assoc,assoc_sh"'
 Start-Process -FilePath $installer -ArgumentList $install_args -Wait
 
 # Start a git-bash shell
